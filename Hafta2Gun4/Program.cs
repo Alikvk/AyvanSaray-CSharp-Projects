@@ -11,6 +11,8 @@ namespace Hafta2Gun4
         static void Main(string[] args)
         {
             // 1 ile 49 arasında rasgele 6 sayıyı bir diziye aktaran bunları kendi arasında sıralayan programı yazınız
+
+
             //For ile yapılan kısmında bir sıkıntı yok while ile yaparken bri iki eksiği var
             int ilkSayi;
             int ikinciSayi;
@@ -26,51 +28,67 @@ namespace Hafta2Gun4
             int sayac = 2;
             fibonacciSayilar[0] = ilkSayi;
             fibonacciSayilar[1] = ikinciSayi;
-            
-            //for (int i = 2; i < 100; i++)
-            //{
 
-            //    if (ilkSayi + ikinciSayi > 100)
-            //    {
-            //        break;
-            //    }
-            //    else
-            //    {
-            //        fibonacciSayilar[i] = ilkSayi + ikinciSayi;
-            //        ilkSayi = ikinciSayi;
-            //        ikinciSayi = fibonacciSayilar[i];
-            //    }
-
-
-            //}
-            //foreach (int sayi in fibonacciSayilar)
-            //{
-            //    Console.Write(sayi + " ");
-            //}
-            while (toplam < 100)
+            for (int i = 2; i < 100; i++)
             {
 
-                if (toplam > 100)
+                if (ilkSayi + ikinciSayi > 100)
                 {
                     break;
                 }
                 else
                 {
-                    toplam = ilkSayi + ikinciSayi;
-                    fibonacciSayilar[sayac] = toplam;
-                    sayac++;
+                    fibonacciSayilar[i] = ilkSayi + ikinciSayi;
                     ilkSayi = ikinciSayi;
-                    ikinciSayi = toplam;
-
+                    ikinciSayi = fibonacciSayilar[i];
                 }
+
 
             }
             foreach (int sayi in fibonacciSayilar)
             {
                 Console.Write(sayi + " ");
             }
+            //while (toplam < 100)
+            //{
+
+            //    if (toplam > 100)
+            //    {
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        toplam = ilkSayi + ikinciSayi;
+            //        fibonacciSayilar[sayac] = toplam;
+            //        sayac++;
+            //        ilkSayi = ikinciSayi;
+            //        ikinciSayi = toplam;
+
+            //    }
+
+            //}
+            //foreach (int sayi in fibonacciSayilar)
+            //{
+            //    Console.Write(sayi + " ");
+            //}
             Console.ReadKey();
             //---------------------------------------------------------------------------------------------------------------------------------
+            //implicit conversion (type-safe'tir.veri kaybı olmaz)
+            //int sayi = 5000;
+            //long dahabuyuksayi = sayi;
+
+            ////expilicit conversion (veri kaybı vardır)
+            //double ondaliklisayi = 154.95;
+            //int tamsayi = (int)ondaliklisayi;
+
+            ////aşağıdaki cast işlemi hata verir
+            //string yazi = "24121";
+            //int sonuc = (int)yazi;
+
+            ////aşağıdaki cast'ten byte'a değer olarak 192 gelir. 56000%256
+            //int numara = 56000;
+            //byte kucukSayi = (byte)numara;
+
         }
     }
 }
