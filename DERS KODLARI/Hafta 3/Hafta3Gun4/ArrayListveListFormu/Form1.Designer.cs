@@ -33,8 +33,8 @@
             this.btnList = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.flowLayoutPanel = new System.Windows.Forms.Panel();
             this.btnRenklendir = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // btnArray
@@ -85,13 +85,6 @@
             this.listBox1.Size = new System.Drawing.Size(177, 186);
             this.listBox1.TabIndex = 4;
             // 
-            // flowLayoutPanel
-            // 
-            this.flowLayoutPanel.Location = new System.Drawing.Point(273, 94);
-            this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(276, 186);
-            this.flowLayoutPanel.TabIndex = 5;
-            // 
             // btnRenklendir
             // 
             this.btnRenklendir.Location = new System.Drawing.Point(451, 27);
@@ -103,13 +96,20 @@
             this.btnRenklendir.Visible = false;
             this.btnRenklendir.Click += new System.EventHandler(this.btnRenklendir_Click);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(272, 94);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(266, 186);
+            this.flowLayoutPanel1.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 324);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btnRenklendir);
-            this.Controls.Add(this.flowLayoutPanel);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.btnList);
@@ -128,8 +128,8 @@
         private System.Windows.Forms.Button btnList;
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Panel flowLayoutPanel;
         private System.Windows.Forms.Button btnRenklendir;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 

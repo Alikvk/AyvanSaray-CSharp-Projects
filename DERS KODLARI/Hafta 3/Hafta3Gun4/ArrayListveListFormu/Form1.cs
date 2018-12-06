@@ -73,26 +73,31 @@ namespace ArrayListveListFormu
         {
 
 
-            flowLayoutPanel.Controls.Clear();
+            flowLayoutPanel1.Controls.Clear();
             buttons.Clear();
             for (int i = 0; i < 7; i++)
             {
                 Button btn = new Button();
                 btn.Text = ("Buton " + i).ToString();
                 btn.Name = "btn" + i;
-                btn.Tag = i+1;
+                btn.Tag = i;
                 btn.Click +=new EventHandler(btnListi_Click);
 
                 buttons.Add(btn);
 
-                flowLayoutPanel.Controls.Add(buttons[i]);
+                flowLayoutPanel1.Controls.Add(buttons[i]);
             }
             MessageBox.Show(buttons.Count + " yeni buton eklendi.");
             btnRenklendir.Show();
         }
         private void btnListi_Click(object sender, EventArgs e)
         {
-           
+            Button btn = (Button)sender;
+            while (true)
+            {
+
+            }
+            
         }
         private void btnRenklendir_Click(object sender, EventArgs e)
         {
