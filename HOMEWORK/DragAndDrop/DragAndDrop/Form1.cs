@@ -22,7 +22,7 @@ namespace DragAndDrop
         private void PicSource_MouseDown(object sender, MouseEventArgs e)
         {
 
-            // Start the drag if it's the right mouse button.
+            // Eğer mousen sol tuşu ile basılıyorsa kopyalamaya izin ver
             if (e.Button == MouseButtons.Left)
             {
                 picBoxSource.DoDragDrop(picBoxSource.Image,

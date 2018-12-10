@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeniYakala", "BeniYakala\BeniYakala.csproj", "{0D7C9ADB-14C9-473E-BCAB-431EE618D5CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KosuYarismasi", "KosuYarismasi\KosuYarismasi.csproj", "{9F67EE66-06E2-4B97-8986-7BCAB665E528}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D7C9ADB-14C9-473E-BCAB-431EE618D5CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D7C9ADB-14C9-473E-BCAB-431EE618D5CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D7C9ADB-14C9-473E-BCAB-431EE618D5CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D7C9ADB-14C9-473E-BCAB-431EE618D5CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F67EE66-06E2-4B97-8986-7BCAB665E528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F67EE66-06E2-4B97-8986-7BCAB665E528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F67EE66-06E2-4B97-8986-7BCAB665E528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F67EE66-06E2-4B97-8986-7BCAB665E528}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3205002B-DA57-4CB6-8149-B1BF7AA1E584}
+	EndGlobalSection
+EndGlobal
