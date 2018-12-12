@@ -13,7 +13,7 @@ namespace Hafta2Gun4
             // 1 ile 49 arasında rasgele 6 sayıyı bir diziye aktaran bunları kendi arasında sıralayan programı yazınız
 
 
-            //For ile yapılan kısmında bir sıkıntı yok while ile yaparken bri iki eksiği var
+            //For ile yapılan kısmında bir sıkıntı yok while ile yaparken bir iki eksiği var
             int ilkSayi;
             int ikinciSayi;
             int[] fibonacciSayilar = new int[100];
