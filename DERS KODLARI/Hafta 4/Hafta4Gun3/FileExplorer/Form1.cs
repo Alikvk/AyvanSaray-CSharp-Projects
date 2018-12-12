@@ -32,11 +32,16 @@ namespace FileExplorer
             treeView1.Nodes.Clear();
             string path = cmbDrivers.SelectedItem.ToString();
             treeView1.Nodes.Add(path);
-            foreach (var f in Directory.EnumerateFiles(path))
+            foreach (var f in Directory.GetDirectories(path))
             {
                 TreeNode folder = new TreeNode(f);
                 treeView1.Nodes.Add(folder);
             }
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
         }
     }
 }
