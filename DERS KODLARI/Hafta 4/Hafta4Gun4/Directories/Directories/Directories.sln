@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeView", "TreeView\TreeView.csproj", "{F9F752E7-9D24-4D1C-B4AE-3D3243EAE87C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dosyalar", "Dosyalar\Dosyalar.csproj", "{DEE00946-6048-4275-99E8-BB0A56085829}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileExplorer", "FileExplorer\FileExplorer.csproj", "{4310B4C1-0BF7-4BA5-A468-99AE2943A412}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9F752E7-9D24-4D1C-B4AE-3D3243EAE87C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9F752E7-9D24-4D1C-B4AE-3D3243EAE87C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9F752E7-9D24-4D1C-B4AE-3D3243EAE87C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9F752E7-9D24-4D1C-B4AE-3D3243EAE87C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEE00946-6048-4275-99E8-BB0A56085829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEE00946-6048-4275-99E8-BB0A56085829}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEE00946-6048-4275-99E8-BB0A56085829}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEE00946-6048-4275-99E8-BB0A56085829}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4310B4C1-0BF7-4BA5-A468-99AE2943A412}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4310B4C1-0BF7-4BA5-A468-99AE2943A412}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4310B4C1-0BF7-4BA5-A468-99AE2943A412}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4310B4C1-0BF7-4BA5-A468-99AE2943A412}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
