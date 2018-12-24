@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DbFirma">
+  <DataContextMoniker Name="/DbFirmaDataContext" />
+  <nestedChildShapes>
+    <classShape Id="a306520a-e83d-43e2-b6d9-b246943ea64b" absoluteBounds="3.5, 1, 2, 4.2708154296875">
+      <DataClassMoniker Name="/DbFirmaDataContext/bgFirmaKayit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab50a8ec-0b3d-449e-a2f4-c72d1c2a2eb5" absoluteBounds="3.515, 1.46, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fe095836-1cfa-4719-9c36-f697106defa2" absoluteBounds="0.75, 2.625, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DbFirmaDataContext/bgFirmaTipi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d3b2e43f-125c-4a2d-a697-997ad62d4a18" absoluteBounds="0.765, 3.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 3.22199625651042); (3.5 : 3.22199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DbFirmaDataContext/bgFirmaTipi/bgFirmaTipi_bgFirmaKayit" />
+      <nodes>
+        <classShapeMoniker Id="fe095836-1cfa-4719-9c36-f697106defa2" />
+        <classShapeMoniker Id="a306520a-e83d-43e2-b6d9-b246943ea64b" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
