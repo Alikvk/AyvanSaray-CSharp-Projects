@@ -232,7 +232,7 @@ namespace FirmaKayit.Hangar
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
-					this.OnFtipiChanging(value);
+					this.OnFtipiChanging(value); 
 					this.SendPropertyChanging();
 					this._Ftipi = value;
 					this.SendPropertyChanged("Ftipi");

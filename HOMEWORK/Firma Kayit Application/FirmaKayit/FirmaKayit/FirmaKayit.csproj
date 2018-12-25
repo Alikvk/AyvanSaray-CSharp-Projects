@@ -78,6 +78,7 @@
     </Compile>
     <Compile Include="Hangar\Formlar.cs" />
     <Compile Include="Hangar\Mesajlar.cs" />
+    <Compile Include="Hangar\Numaralar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AnaSayfa.resx">
@@ -97,6 +98,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Hangar\DbFirma.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
@@ -119,7 +121,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Koala.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>

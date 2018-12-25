@@ -123,7 +123,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.btnSil);
             this.splitContainer1.Panel2.Controls.Add(this.btnKaydet);
             this.splitContainer1.Size = new System.Drawing.Size(878, 446);
-            this.splitContainer1.SplitterDistance = 672;
+            this.splitContainer1.SplitterDistance = 680;
             this.splitContainer1.TabIndex = 1;
             // 
             // cbFirmaTip
@@ -383,7 +383,7 @@
             this.btnCollaps.BackColor = System.Drawing.Color.Red;
             this.btnCollaps.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCollaps.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnCollaps.Location = new System.Drawing.Point(648, 0);
+            this.btnCollaps.Location = new System.Drawing.Point(656, 0);
             this.btnCollaps.Name = "btnCollaps";
             this.btnCollaps.Size = new System.Drawing.Size(20, 442);
             this.btnCollaps.TabIndex = 0;
@@ -399,13 +399,14 @@
             this.btnSil.TabIndex = 4;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnKaydet
             // 
             this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnKaydet.Location = new System.Drawing.Point(0, 374);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(198, 68);
+            this.btnKaydet.Size = new System.Drawing.Size(190, 68);
             this.btnKaydet.TabIndex = 3;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
