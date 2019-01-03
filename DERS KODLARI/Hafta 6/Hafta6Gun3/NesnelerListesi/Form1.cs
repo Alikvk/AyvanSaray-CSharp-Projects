@@ -32,6 +32,8 @@ namespace NesnelerListesi
             int ToplamMaas = oList.Sum(x => x.Maas);
             txtToplamSayi.Text = ToplamSayi.ToString();
             txtToplamMaas.Text = ToplamMaas.ToString();
+            //dataGridView1.FirstDisplayedScrollingRowIndex = ToplamSayi - 1;  //dataGridView1.RowCount
+            //dataGridView1.Rows[ToplamSayi - 1].Selected = true;
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
@@ -42,7 +44,12 @@ namespace NesnelerListesi
             o.Soyad = txtSoyad.Text;
             o.Maas = Convert.ToInt32(txtMaas.Text);
             oList.Add(o);
+            //  dataGridView1.Rows[dataGridView1.Rows.Count - 1].Selected = true;
+
             Doldur();
+            //dataGridView1.FirstDisplayedScrollingRowIndex = dataGridView1.RowCount - 1;  //dataGridView1.RowCount
+            //dataGridView1.Rows[dataGridView1.RowCount - 1].Selected = true;
+            
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -76,7 +83,7 @@ namespace NesnelerListesi
             //oList.Add(o2);
 
             for (int i = 1; i < 100; i++)
-            {
+            {//FakeData isimli eklentiyi nuget managerdan yüklenmesi gerekiyor
                 Ogrenci o = new Ogrenci();
                 o.Id = i;
                 o.Ad = FakeData.NameData.GetFirstName();
