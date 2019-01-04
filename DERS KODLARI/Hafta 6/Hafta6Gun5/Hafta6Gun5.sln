@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessModifier_AnaProje", "AccessModifier_AnaProje\AccessModifier_AnaProje.csproj", "{634EC4E3-B76B-4C29-81A1-F1B5AD50A5C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{634EC4E3-B76B-4C29-81A1-F1B5AD50A5C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{634EC4E3-B76B-4C29-81A1-F1B5AD50A5C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{634EC4E3-B76B-4C29-81A1-F1B5AD50A5C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{634EC4E3-B76B-4C29-81A1-F1B5AD50A5C6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40734658-A045-41E7-B296-EE01042D2C2D}
+	EndGlobalSection
+EndGlobal
