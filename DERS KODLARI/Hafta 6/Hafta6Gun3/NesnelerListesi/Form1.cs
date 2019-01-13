@@ -68,29 +68,29 @@ namespace NesnelerListesi
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Ogrenci o = new Ogrenci();
-            //o.Id = 1;
-            //o.Ad = "Mehmet";
-            //o.Soyad = "Yılmaz";
-            //o.Maas = 400;
-            //oList.Add(o);
+            Ogrenci o = new Ogrenci();
+            o.Id = 1;
+            o.Ad = "Mehmet";
+            o.Soyad = "Yılmaz";
+            o.Maas = 400;
+            oList.Add(o);
 
-            //Ogrenci o2 = new Ogrenci();
-            //o2.Id = 2;
-            //o2.Ad = "Ahmet";
-            //o2.Soyad = "Yıldız";
-            //o2.Maas = 600;
-            //oList.Add(o2);
+            Ogrenci o2 = new Ogrenci();
+            o2.Id = 2;
+            o2.Ad = "Ahmet";
+            o2.Soyad = "Yıldız";
+            o2.Maas = 600;
+            oList.Add(o2);
 
-            for (int i = 1; i < 100; i++)
-            {//FakeData isimli eklentiyi nuget managerdan yüklenmesi gerekiyor
-                Ogrenci o = new Ogrenci();
-                o.Id = i;
-                o.Ad = FakeData.NameData.GetFirstName();
-                o.Soyad = FakeData.NameData.GetSurname();
-                o.Maas = FakeData.NumberData.GetNumber(600, 800);
-                oList.Add(o);
-            }
+            //for (int i = 1; i < 100; i++)
+            //{//FakeData isimli eklentiyi nuget managerdan yüklenmesi gerekiyor
+            //    Ogrenci o = new Ogrenci();
+            //    o.Id = i;
+            //    o.Ad = FakeData.NameData.GetFirstName();
+            //    o.Soyad = FakeData.NameData.GetSurname();
+            //    o.Maas = FakeData.NumberData.GetNumber(600, 800);
+            //    oList.Add(o);
+            //}
         }
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
