@@ -34,7 +34,7 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.btnVeriBul = new System.Windows.Forms.Button();
             this.btnSQLtoXML = new System.Windows.Forms.Button();
-            this.btnXPathIleVeriBul = new System.Windows.Forms.Button();
+            this.btnXPathIleTagBul = new System.Windows.Forms.Button();
             this.btnXMLtoSQL = new System.Windows.Forms.Button();
             this.btnXpathileVerileriBul = new System.Windows.Forms.Button();
             this.btnSechemaOlustur = new System.Windows.Forms.Button();
@@ -99,14 +99,15 @@
             this.btnSQLtoXML.Text = "Veritabanından XML e oku";
             this.btnSQLtoXML.UseVisualStyleBackColor = true;
             // 
-            // btnXPathIleVeriBul
+            // btnXPathIleTagBul
             // 
-            this.btnXPathIleVeriBul.Location = new System.Drawing.Point(12, 327);
-            this.btnXPathIleVeriBul.Name = "btnXPathIleVeriBul";
-            this.btnXPathIleVeriBul.Size = new System.Drawing.Size(158, 46);
-            this.btnXPathIleVeriBul.TabIndex = 1;
-            this.btnXPathIleVeriBul.Text = "XML de veriyi XPath ile Bul";
-            this.btnXPathIleVeriBul.UseVisualStyleBackColor = true;
+            this.btnXPathIleTagBul.Location = new System.Drawing.Point(12, 327);
+            this.btnXPathIleTagBul.Name = "btnXPathIleTagBul";
+            this.btnXPathIleTagBul.Size = new System.Drawing.Size(158, 46);
+            this.btnXPathIleTagBul.TabIndex = 1;
+            this.btnXPathIleTagBul.Text = "XML de veriyi XPath ile Bul";
+            this.btnXPathIleTagBul.UseVisualStyleBackColor = true;
+            this.btnXPathIleTagBul.Click += new System.EventHandler(this.btnXPathIleTagBul_Click);
             // 
             // btnXMLtoSQL
             // 
@@ -152,6 +153,7 @@
             this.btnVeriSil.TabIndex = 1;
             this.btnVeriSil.Text = "XML den Veri Sil";
             this.btnVeriSil.UseVisualStyleBackColor = true;
+            this.btnVeriSil.Click += new System.EventHandler(this.btnVeriSil_Click);
             // 
             // btnSQLtoSchema
             // 
@@ -186,7 +188,7 @@
             this.Controls.Add(this.btnAddChild);
             this.Controls.Add(this.btnVeriDegistir);
             this.Controls.Add(this.btnXpathileVerileriBul);
-            this.Controls.Add(this.btnXPathIleVeriBul);
+            this.Controls.Add(this.btnXPathIleTagBul);
             this.Controls.Add(this.btnVeriBul);
             this.Controls.Add(this.btnVeriOku);
             this.Controls.Add(this.dataGridView1);
@@ -206,7 +208,7 @@
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.Button btnVeriBul;
         private System.Windows.Forms.Button btnSQLtoXML;
-        private System.Windows.Forms.Button btnXPathIleVeriBul;
+        private System.Windows.Forms.Button btnXPathIleTagBul;
         private System.Windows.Forms.Button btnXMLtoSQL;
         private System.Windows.Forms.Button btnXpathileVerileriBul;
         private System.Windows.Forms.Button btnSechemaOlustur;
