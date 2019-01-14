@@ -61,6 +61,7 @@
             this.btnVeriOku.TabIndex = 1;
             this.btnVeriOku.Text = "XML Dosyasından Veri Oku";
             this.btnVeriOku.UseVisualStyleBackColor = true;
+            this.btnVeriOku.Click += new System.EventHandler(this.btnVeriOku_Click);
             // 
             // btnAddChild
             // 
@@ -87,6 +88,7 @@
             this.btnVeriBul.TabIndex = 1;
             this.btnVeriBul.Text = "XML içindeki Veriyi Bul";
             this.btnVeriBul.UseVisualStyleBackColor = true;
+            this.btnVeriBul.Click += new System.EventHandler(this.btnVeriBul_Click);
             // 
             // btnSQLtoXML
             // 
@@ -190,6 +192,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
