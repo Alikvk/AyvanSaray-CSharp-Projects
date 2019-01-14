@@ -90,6 +90,7 @@ namespace XmlVeriIslemleri
                 if (item.ChildNodes[0].InnerText == "Can" || item.Attributes["TcNo"].Value == "12345678901")
                 {
                     item.ParentNode.RemoveChild(item);
+                    xmlDoc.Save(dosyaninYolu);
                     bulundu = true;
                     break;
                 }
