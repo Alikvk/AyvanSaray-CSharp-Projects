@@ -30,18 +30,18 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnVeriOku = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAddChild = new System.Windows.Forms.Button();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.btnVeriBul = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnSQLtoXML = new System.Windows.Forms.Button();
             this.btnXPathIleVeriBul = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.btnXMLtoSQL = new System.Windows.Forms.Button();
+            this.btnXpathileVerileriBul = new System.Windows.Forms.Button();
+            this.btnSechemaOlustur = new System.Windows.Forms.Button();
+            this.btnVeriDegistir = new System.Windows.Forms.Button();
+            this.btnVeriSil = new System.Windows.Forms.Button();
+            this.btnSQLtoSchema = new System.Windows.Forms.Button();
+            this.btnXMLSchemaDogrula = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,140 +50,140 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(322, 205);
+            this.dataGridView1.Size = new System.Drawing.Size(394, 205);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnVeriOku
             // 
             this.btnVeriOku.Location = new System.Drawing.Point(12, 223);
             this.btnVeriOku.Name = "btnVeriOku";
-            this.btnVeriOku.Size = new System.Drawing.Size(134, 46);
+            this.btnVeriOku.Size = new System.Drawing.Size(158, 46);
             this.btnVeriOku.TabIndex = 1;
-            this.btnVeriOku.Text = "button1";
+            this.btnVeriOku.Text = "XML Dosyasından Veri Oku";
             this.btnVeriOku.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnAddChild
             // 
-            this.button2.Location = new System.Drawing.Point(192, 223);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(142, 46);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button1";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAddChild.Location = new System.Drawing.Point(237, 223);
+            this.btnAddChild.Name = "btnAddChild";
+            this.btnAddChild.Size = new System.Drawing.Size(169, 46);
+            this.btnAddChild.TabIndex = 1;
+            this.btnAddChild.Text = "XML\'e veri Ekle";
+            this.btnAddChild.UseVisualStyleBackColor = true;
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(353, 12);
+            this.webBrowser1.Location = new System.Drawing.Point(412, 18);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(435, 331);
+            this.webBrowser1.Size = new System.Drawing.Size(435, 511);
             this.webBrowser1.TabIndex = 2;
             // 
             // btnVeriBul
             // 
             this.btnVeriBul.Location = new System.Drawing.Point(12, 275);
             this.btnVeriBul.Name = "btnVeriBul";
-            this.btnVeriBul.Size = new System.Drawing.Size(134, 46);
+            this.btnVeriBul.Size = new System.Drawing.Size(158, 46);
             this.btnVeriBul.TabIndex = 1;
-            this.btnVeriBul.Text = "button1";
+            this.btnVeriBul.Text = "XML içindeki Veriyi Bul";
             this.btnVeriBul.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnSQLtoXML
             // 
-            this.button4.Location = new System.Drawing.Point(192, 275);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(142, 46);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "button1";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSQLtoXML.Location = new System.Drawing.Point(237, 275);
+            this.btnSQLtoXML.Name = "btnSQLtoXML";
+            this.btnSQLtoXML.Size = new System.Drawing.Size(169, 46);
+            this.btnSQLtoXML.TabIndex = 1;
+            this.btnSQLtoXML.Text = "Veritabanından XML e oku";
+            this.btnSQLtoXML.UseVisualStyleBackColor = true;
             // 
             // btnXPathIleVeriBul
             // 
             this.btnXPathIleVeriBul.Location = new System.Drawing.Point(12, 327);
             this.btnXPathIleVeriBul.Name = "btnXPathIleVeriBul";
-            this.btnXPathIleVeriBul.Size = new System.Drawing.Size(134, 46);
+            this.btnXPathIleVeriBul.Size = new System.Drawing.Size(158, 46);
             this.btnXPathIleVeriBul.TabIndex = 1;
-            this.btnXPathIleVeriBul.Text = "button1";
+            this.btnXPathIleVeriBul.Text = "XML de veriyi XPath ile Bul";
             this.btnXPathIleVeriBul.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnXMLtoSQL
             // 
-            this.button6.Location = new System.Drawing.Point(192, 327);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(142, 46);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "button1";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnXMLtoSQL.Location = new System.Drawing.Point(237, 327);
+            this.btnXMLtoSQL.Name = "btnXMLtoSQL";
+            this.btnXMLtoSQL.Size = new System.Drawing.Size(169, 46);
+            this.btnXMLtoSQL.TabIndex = 1;
+            this.btnXMLtoSQL.Text = "XML den veritabanına Yaz";
+            this.btnXMLtoSQL.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnXpathileVerileriBul
             // 
-            this.button7.Location = new System.Drawing.Point(12, 379);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(134, 46);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "button1";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnXpathileVerileriBul.Location = new System.Drawing.Point(12, 379);
+            this.btnXpathileVerileriBul.Name = "btnXpathileVerileriBul";
+            this.btnXpathileVerileriBul.Size = new System.Drawing.Size(158, 46);
+            this.btnXpathileVerileriBul.TabIndex = 1;
+            this.btnXpathileVerileriBul.Text = "XML de verileri XPath ile Bul";
+            this.btnXpathileVerileriBul.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btnSechemaOlustur
             // 
-            this.button8.Location = new System.Drawing.Point(192, 379);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(142, 46);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "button1";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnSechemaOlustur.Location = new System.Drawing.Point(237, 379);
+            this.btnSechemaOlustur.Name = "btnSechemaOlustur";
+            this.btnSechemaOlustur.Size = new System.Drawing.Size(169, 46);
+            this.btnSechemaOlustur.TabIndex = 1;
+            this.btnSechemaOlustur.Text = "XML schema tasarımı olustur";
+            this.btnSechemaOlustur.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btnVeriDegistir
             // 
-            this.button9.Location = new System.Drawing.Point(343, 350);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(134, 46);
-            this.button9.TabIndex = 1;
-            this.button9.Text = "button1";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnVeriDegistir.Location = new System.Drawing.Point(12, 431);
+            this.btnVeriDegistir.Name = "btnVeriDegistir";
+            this.btnVeriDegistir.Size = new System.Drawing.Size(158, 46);
+            this.btnVeriDegistir.TabIndex = 1;
+            this.btnVeriDegistir.Text = "XML içindeki veriyi Degistir";
+            this.btnVeriDegistir.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // btnVeriSil
             // 
-            this.button10.Location = new System.Drawing.Point(343, 402);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(134, 46);
-            this.button10.TabIndex = 1;
-            this.button10.Text = "button1";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnVeriSil.Location = new System.Drawing.Point(12, 483);
+            this.btnVeriSil.Name = "btnVeriSil";
+            this.btnVeriSil.Size = new System.Drawing.Size(158, 46);
+            this.btnVeriSil.TabIndex = 1;
+            this.btnVeriSil.Text = "XML den Veri Sil";
+            this.btnVeriSil.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // btnSQLtoSchema
             // 
-            this.button11.Location = new System.Drawing.Point(523, 350);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(142, 46);
-            this.button11.TabIndex = 1;
-            this.button11.Text = "button1";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btnSQLtoSchema.Location = new System.Drawing.Point(237, 431);
+            this.btnSQLtoSchema.Name = "btnSQLtoSchema";
+            this.btnSQLtoSchema.Size = new System.Drawing.Size(169, 46);
+            this.btnSQLtoSchema.TabIndex = 1;
+            this.btnSQLtoSchema.Text = "SQL den istenen semaya uygun XML olustur";
+            this.btnSQLtoSchema.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // btnXMLSchemaDogrula
             // 
-            this.button12.Location = new System.Drawing.Point(523, 402);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(142, 46);
-            this.button12.TabIndex = 1;
-            this.button12.Text = "button1";
-            this.button12.UseVisualStyleBackColor = true;
+            this.btnXMLSchemaDogrula.Location = new System.Drawing.Point(237, 483);
+            this.btnXMLSchemaDogrula.Name = "btnXMLSchemaDogrula";
+            this.btnXMLSchemaDogrula.Size = new System.Drawing.Size(169, 46);
+            this.btnXMLSchemaDogrula.TabIndex = 1;
+            this.btnXMLSchemaDogrula.Text = "XML schema Dogrulama";
+            this.btnXMLSchemaDogrula.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 485);
+            this.ClientSize = new System.Drawing.Size(859, 535);
             this.Controls.Add(this.webBrowser1);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btnXMLSchemaDogrula);
+            this.Controls.Add(this.btnSQLtoSchema);
+            this.Controls.Add(this.btnSechemaOlustur);
+            this.Controls.Add(this.btnXMLtoSQL);
+            this.Controls.Add(this.btnSQLtoXML);
+            this.Controls.Add(this.btnVeriSil);
+            this.Controls.Add(this.btnAddChild);
+            this.Controls.Add(this.btnVeriDegistir);
+            this.Controls.Add(this.btnXpathileVerileriBul);
             this.Controls.Add(this.btnXPathIleVeriBul);
             this.Controls.Add(this.btnVeriBul);
             this.Controls.Add(this.btnVeriOku);
@@ -199,18 +199,18 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnVeriOku;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAddChild;
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.Button btnVeriBul;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnSQLtoXML;
         private System.Windows.Forms.Button btnXPathIleVeriBul;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button btnXMLtoSQL;
+        private System.Windows.Forms.Button btnXpathileVerileriBul;
+        private System.Windows.Forms.Button btnSechemaOlustur;
+        private System.Windows.Forms.Button btnVeriDegistir;
+        private System.Windows.Forms.Button btnVeriSil;
+        private System.Windows.Forms.Button btnSQLtoSchema;
+        private System.Windows.Forms.Button btnXMLSchemaDogrula;
     }
 }
 
