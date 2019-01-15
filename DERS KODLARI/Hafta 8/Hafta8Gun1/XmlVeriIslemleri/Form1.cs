@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,7 @@ namespace XmlVeriIslemleri
             InitializeComponent();
         }
         string dosyaninYolu = Application.StartupPath + "\\CalisanListesi.xml";
+        const string veritabani = @"Data Source=.;Initial Catalog=Northwind;Integrated Security=True";
         private void btnVeriOku_Click(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
@@ -45,6 +47,7 @@ namespace XmlVeriIslemleri
                     bulundu = true;
                     break;
                 }
+
                
             }
             if (!bulundu)
@@ -86,20 +89,34 @@ namespace XmlVeriIslemleri
             xmlDoc.Load(dosyaninYolu);
             XmlNode secilenNode = xmlDoc.ChildNodes[1];
             bool bulundu = false;
-            foreach (XmlNode item in secilenNode)
+            XmlNode secilenNode1 = xmlDoc.SelectSingleNode("Calisanlar/Calisan[Adi='Melek']");
+            if (secilenNode != null)
             {
-                if (item.ChildNodes[0].InnerText == "Can" || item.Attributes["TcNo"].Value == "12345678901")
-                {
-                    item.ParentNode.RemoveChild(item);
-                    xmlDoc.Save(dosyaninYolu);
-                    bulundu = true;
-                    break;
-                }
+                xmlDoc.DocumentElement.RemoveChild(secilenNode1);
+                xmlDoc.Save(dosyaninYolu);
+                MessageBox.Show("Melek Dosyadan Silindi");
             }
-            if (!bulundu)
+            else
             {
-                MessageBox.Show("Aranilan kişi Bulunamadı", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Aranan kisi 'Melek' bulunamadi","Hata",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
+
+            //foreach (XmlNode item in secilenNode)
+            //{
+            //    if (item.ChildNodes[0].InnerText == "Can" || item.Attributes["TcNo"].Value == "12345678901")
+            //    {
+            //        item.ParentNode.RemoveChild(item);
+            //        xmlDoc.Save(dosyaninYolu);
+            //        bulundu = true;
+            //        break;
+            //    }
+            //}
+            //if (!bulundu)
+            //{
+            //    MessageBox.Show("Aranilan kişi Bulunamadı", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //}
+
+
             webBrowser1.Url = new Uri(dosyaninYolu);
 
         }
@@ -152,6 +169,57 @@ namespace XmlVeriIslemleri
                 MessageBox.Show("Aranan kişi 'Melek' bulunamadi","",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
             webBrowser1.Url = new Uri(dosyaninYolu);
+        }
+
+        private void btnAddChild_Click(object sender, EventArgs e)
+        {
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load(dosyaninYolu);
+            XmlElement yeniEleman = xmlDoc.CreateElement("Calisan");
+
+            XmlAttribute attrTcNo = xmlDoc.CreateAttribute("TcNo");
+            attrTcNo.Value = "12345678904";
+            yeniEleman.Attributes.Append(attrTcNo);
+
+            XmlNode xAdi = xmlDoc.CreateElement("Adi");
+            xAdi.InnerText = "Buse";
+            yeniEleman.AppendChild(xAdi);
+
+            XmlNode xSoyadi = xmlDoc.CreateElement("Soyadi");
+            xSoyadi.InnerText = "Zengin";
+            yeniEleman.AppendChild(xSoyadi);
+
+            XmlNode xYil = xmlDoc.CreateElement("DogumYili");
+            xYil.InnerText = "1985";
+            yeniEleman.AppendChild(xYil);
+
+            xmlDoc.DocumentElement.AppendChild(yeniEleman);
+            xmlDoc.Save(dosyaninYolu);
+            btnVeriOku_Click( sender,  e);
+            MessageBox.Show("Buse Eklendi");
+            webBrowser1.Url = new Uri(dosyaninYolu);
+        }
+
+        private void btnSQLtoXML_Click(object sender, EventArgs e)
+        {
+            SqlConnection cnn = new SqlConnection(veritabani);
+            SqlDataAdapter adp = new SqlDataAdapter("Select * from Products",cnn);
+            DataTable dt = new DataTable("Products");
+            adp.Fill(dt);
+
+            DataSet ds = new DataSet("Products");
+            ds.Tables.Add(dt);
+
+            FolderBrowserDialog fd = new FolderBrowserDialog();
+            DialogResult dr = fd.ShowDialog();
+            if (dr !=DialogResult.OK)
+            {
+                return;
+            }
+            string dosya = fd.SelectedPath+"\\SQLtoXML.xml";
+            ds.WriteXml(dosya);
+            MessageBox.Show("Sql den gelen veriler XML dosyasına yazıldı.\n"+dosya);
+            webBrowser1.Url = new Uri(dosya);
         }
     }
 }

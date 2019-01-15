@@ -71,6 +71,7 @@
             this.btnAddChild.TabIndex = 1;
             this.btnAddChild.Text = "XML\'e veri Ekle";
             this.btnAddChild.UseVisualStyleBackColor = true;
+            this.btnAddChild.Click += new System.EventHandler(this.btnAddChild_Click);
             // 
             // webBrowser1
             // 
@@ -98,6 +99,7 @@
             this.btnSQLtoXML.TabIndex = 1;
             this.btnSQLtoXML.Text = "Veritabanından XML e oku";
             this.btnSQLtoXML.UseVisualStyleBackColor = true;
+            this.btnSQLtoXML.Click += new System.EventHandler(this.btnSQLtoXML_Click);
             // 
             // btnXPathIleTagBul
             // 
