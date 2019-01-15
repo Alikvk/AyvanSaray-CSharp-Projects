@@ -119,6 +119,7 @@
             this.btnXMLtoSQL.TabIndex = 1;
             this.btnXMLtoSQL.Text = "XML den veritabanına Yaz";
             this.btnXMLtoSQL.UseVisualStyleBackColor = true;
+            this.btnXMLtoSQL.Click += new System.EventHandler(this.btnXMLtoSQL_Click);
             // 
             // btnXpathileVerileriBul
             // 

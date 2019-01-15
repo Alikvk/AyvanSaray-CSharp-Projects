@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -204,10 +205,10 @@ namespace XmlVeriIslemleri
         {
             SqlConnection cnn = new SqlConnection(veritabani);
             SqlDataAdapter adp = new SqlDataAdapter("Select * from Products",cnn);
-            DataTable dt = new DataTable("Products");
+            DataTable dt = new DataTable("Products");// Bir tablo gösteriyor
             adp.Fill(dt);
 
-            DataSet ds = new DataSet("Products");
+            DataSet ds = new DataSet("Products");// Birden çok tablo içeriyor
             ds.Tables.Add(dt);
 
             FolderBrowserDialog fd = new FolderBrowserDialog();
@@ -220,6 +221,32 @@ namespace XmlVeriIslemleri
             ds.WriteXml(dosya);
             MessageBox.Show("Sql den gelen veriler XML dosyasına yazıldı.\n"+dosya);
             webBrowser1.Url = new Uri(dosya);
+        }
+
+        private void btnXMLtoSQL_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog fd = new FolderBrowserDialog();
+            DialogResult dr = fd.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                string dosya = fd.SelectedPath + "\\SQLtoXML.xml";
+                if (File.Exists(dosya))
+                {
+                    SqlConnection cnn = new SqlConnection(veritabani);
+                    SqlDataAdapter adp = new SqlDataAdapter("Select * from ProductsX",cnn);
+
+                    SqlCommandBuilder cb = new SqlCommandBuilder(adp);
+                    DataSet ds = new DataSet();
+                    ds.ReadXml(dosya);
+                    adp.Update(ds.Tables[0]);
+                    MessageBox.Show("XML'den okunan veriler ProductsX tablosuna kaydedildi");
+                    webBrowser1.Url = new Uri(dosya);
+                }
+                else
+                {
+                    MessageBox.Show("Dosya Bulunamadi. \n"+dosya,"",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                }
+            }
         }
     }
 }
