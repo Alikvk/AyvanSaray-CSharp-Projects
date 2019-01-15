@@ -126,6 +126,7 @@
             this.btnXpathileVerileriBul.TabIndex = 1;
             this.btnXpathileVerileriBul.Text = "XML de verileri XPath ile Bul";
             this.btnXpathileVerileriBul.UseVisualStyleBackColor = true;
+            this.btnXpathileVerileriBul.Click += new System.EventHandler(this.btnXpathileVerileriBul_Click);
             // 
             // btnSechemaOlustur
             // 
@@ -144,6 +145,7 @@
             this.btnVeriDegistir.TabIndex = 1;
             this.btnVeriDegistir.Text = "XML içindeki veriyi Degistir";
             this.btnVeriDegistir.UseVisualStyleBackColor = true;
+            this.btnVeriDegistir.Click += new System.EventHandler(this.btnVeriDegistir_Click);
             // 
             // btnVeriSil
             // 

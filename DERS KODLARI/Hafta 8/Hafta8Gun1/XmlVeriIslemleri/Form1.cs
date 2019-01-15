@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Xml.XPath;
 
 namespace XmlVeriIslemleri
 {
@@ -63,7 +64,7 @@ namespace XmlVeriIslemleri
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(dosyaninYolu);
             XmlNode secilenNode = xmlDoc.SelectSingleNode("Calisanlar/Calisan[Adi='Melek']");
-            // XmlNode secilenNode1 = xmlDoc.SelectSingleNode("Calisanlar/Calisan[@TcNo='12345678902']");
+            // XmlNode secilenNode1 = xmlDoc.SelectSingleNode("Calisanlar/Calisan[@TcNo='12345678902']"); value kısmındaki değeri aramak için kullanırız
             if (secilenNode !=null)
             {
                 MessageBox.Show("Aranan Kişi Xpath ile Kolayca Bulundu: \n \n"
@@ -101,6 +102,56 @@ namespace XmlVeriIslemleri
             }
             webBrowser1.Url = new Uri(dosyaninYolu);
 
+        }
+
+        private void btnXpathileVerileriBul_Click(object sender, EventArgs e)
+        {
+            //Xpath ile bir çok veriyi aynı anda iterate etmemizi sağlamaktadır
+            XPathDocument xmlDoc = new XPathDocument(dosyaninYolu);
+            XPathNavigator xNav = xmlDoc.CreateNavigator();
+            XPathNodeIterator secilenNode = xNav.Select("Calisanlar/Calisan/Adi");
+
+            string metin = "";
+            while (secilenNode.MoveNext())
+            {
+                if (secilenNode.Current.InnerXml.StartsWith("C"))
+                {
+                    metin += secilenNode.Current.InnerXml + "\n";
+                }
+               
+            }
+            if (metin != "")
+            {
+                MessageBox.Show("Adi C ile Baslayanlar \n" + metin);
+            }
+            else
+            {
+                MessageBox.Show("Adi C ile baslayan Bulunamadi");
+            }
+            webBrowser1.Url = new Uri(dosyaninYolu);
+        }
+
+        private void btnVeriDegistir_Click(object sender, EventArgs e)
+        {
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load(dosyaninYolu);
+            XmlNode secilenNode = xmlDoc.SelectSingleNode("Calisanlar/Calisan[Adi='Melek']");
+
+            if (secilenNode != null)
+            {
+                //soyadina ekle
+                secilenNode.ChildNodes[1].InnerText += "Galipler";
+                xmlDoc.Save(dosyaninYolu);
+                MessageBox.Show("Soyadina Ekleme Yapildi:\n\n"
+                    +secilenNode.ChildNodes[0].InnerText+""
+                    +secilenNode.ChildNodes[1].InnerText);
+                //this.btnVeriOku.Click(sender,e);
+            }
+            else
+            {
+                MessageBox.Show("Aranan kişi 'Melek' bulunamadi","",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+            webBrowser1.Url = new Uri(dosyaninYolu);
         }
     }
 }
