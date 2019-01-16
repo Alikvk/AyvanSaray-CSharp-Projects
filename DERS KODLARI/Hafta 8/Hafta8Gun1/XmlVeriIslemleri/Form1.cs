@@ -21,7 +21,9 @@ namespace XmlVeriIslemleri
             InitializeComponent();
         }
         string dosyaninYolu = Application.StartupPath + "\\CalisanListesi.xml";
+        
         const string veritabani = @"Data Source=.;Initial Catalog=Northwind;Integrated Security=True";
+        const string veritabaniPubs = @"Data Source=localhost;Initial Catalog = pubs; Integrated Security = True";
         private void btnVeriOku_Click(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
@@ -248,5 +250,65 @@ namespace XmlVeriIslemleri
                 }
             }
         }
+        private void btnSechemaOlustur_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(veritabani);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("select ProductID, ProductName, UnitPrice from Products", conn);
+            DataTable dataTable = new DataTable("XProduct");
+            dataAdapter.Fill(dataTable);
+            DataSet dataSet = new DataSet("XProducts");
+            dataSet.Tables.Add(dataTable);
+
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            DialogResult result = dialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string dosya = dialog.SelectedPath + "\\mySchema.xsd";
+                dataSet.WriteXmlSchema(dosya);
+                MessageBox.Show("SQL'den gelen sorguya göre XML şema bilgisi dosyaya yazıldı");
+                webBrowser1.Url = new Uri(dosya);
+            }
+        }
+        private void btnSQLtoSchema_Click(object sender, EventArgs e)
+        {
+
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            dialog.Description = "XML schema dosyasının bulunduğu klasörü seçiniz";
+            DialogResult result = dialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                string secilenDosya = dialog.SelectedPath + "\\mySchema.xsd";
+                if (File.Exists(secilenDosya))
+                {
+                    //Farkli bir veritabanından xml şemasına uygun olarak veri alınıyor.
+                   // SqlConnection conn = new SqlConnection("Data Source=localhost;Initial Catalog=pubs;Integrated Security=True");
+                    SqlConnection conn = new SqlConnection(veritabaniPubs);
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter("select pub_id AS ProductID, title AS ProductName, price AS UnitePrice from titles", conn);
+                    DataTable dataTable = new DataTable("XProduct");
+                    //Şemayı kullanarak veri okuması gerekiyor
+                    dataTable.ReadXmlSchema(secilenDosya);
+                    dataAdapter.Fill(dataTable);
+                    DataSet dataSet = new DataSet("XProducts");
+                    dataSet.Tables.Add(dataTable);
+
+                    FolderBrowserDialog dialog2 = new FolderBrowserDialog();
+                    DialogResult result2 = dialog2.ShowDialog();
+                    if (result2 == DialogResult.OK)
+                    {
+                        string xmlDosya = dialog2.SelectedPath + "\\semaya_uygun_veri.xml";
+                        dataSet.WriteXml(xmlDosya);
+                        MessageBox.Show("SQL'den gelen sorguya göre XML şema bilgisi dosyaya yazıldı \n" + xmlDosya);
+                        webBrowser1.Url = new Uri(xmlDosya);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("XML şema dosyası bulunamadı. \n" + secilenDosya);
+                }
+            }
+        }
+
+      
     }
 }

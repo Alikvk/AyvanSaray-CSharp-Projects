@@ -139,6 +139,7 @@
             this.btnSechemaOlustur.TabIndex = 1;
             this.btnSechemaOlustur.Text = "XML schema tasarımı olustur";
             this.btnSechemaOlustur.UseVisualStyleBackColor = true;
+            this.btnSechemaOlustur.Click += new System.EventHandler(this.btnSechemaOlustur_Click);
             // 
             // btnVeriDegistir
             // 
@@ -168,6 +169,7 @@
             this.btnSQLtoSchema.TabIndex = 1;
             this.btnSQLtoSchema.Text = "SQL den istenen semaya uygun XML olustur";
             this.btnSQLtoSchema.UseVisualStyleBackColor = true;
+            this.btnSQLtoSchema.Click += new System.EventHandler(this.btnSQLtoSchema_Click);
             // 
             // btnXMLSchemaDogrula
             // 
