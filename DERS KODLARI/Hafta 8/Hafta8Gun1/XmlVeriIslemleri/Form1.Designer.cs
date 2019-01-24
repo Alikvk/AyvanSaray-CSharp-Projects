@@ -71,6 +71,7 @@
             this.btnAddChild.TabIndex = 1;
             this.btnAddChild.Text = "XML\'e veri Ekle";
             this.btnAddChild.UseVisualStyleBackColor = true;
+            this.btnAddChild.Click += new System.EventHandler(this.btnAddChild_Click);
             // 
             // webBrowser1
             // 
@@ -98,6 +99,7 @@
             this.btnSQLtoXML.TabIndex = 1;
             this.btnSQLtoXML.Text = "Veritabanından XML e oku";
             this.btnSQLtoXML.UseVisualStyleBackColor = true;
+            this.btnSQLtoXML.Click += new System.EventHandler(this.btnSQLtoXML_Click);
             // 
             // btnXPathIleTagBul
             // 
@@ -117,6 +119,7 @@
             this.btnXMLtoSQL.TabIndex = 1;
             this.btnXMLtoSQL.Text = "XML den veritabanına Yaz";
             this.btnXMLtoSQL.UseVisualStyleBackColor = true;
+            this.btnXMLtoSQL.Click += new System.EventHandler(this.btnXMLtoSQL_Click);
             // 
             // btnXpathileVerileriBul
             // 
@@ -126,6 +129,7 @@
             this.btnXpathileVerileriBul.TabIndex = 1;
             this.btnXpathileVerileriBul.Text = "XML de verileri XPath ile Bul";
             this.btnXpathileVerileriBul.UseVisualStyleBackColor = true;
+            this.btnXpathileVerileriBul.Click += new System.EventHandler(this.btnXpathileVerileriBul_Click);
             // 
             // btnSechemaOlustur
             // 
@@ -135,6 +139,7 @@
             this.btnSechemaOlustur.TabIndex = 1;
             this.btnSechemaOlustur.Text = "XML schema tasarımı olustur";
             this.btnSechemaOlustur.UseVisualStyleBackColor = true;
+            this.btnSechemaOlustur.Click += new System.EventHandler(this.btnSechemaOlustur_Click);
             // 
             // btnVeriDegistir
             // 
@@ -144,6 +149,7 @@
             this.btnVeriDegistir.TabIndex = 1;
             this.btnVeriDegistir.Text = "XML içindeki veriyi Degistir";
             this.btnVeriDegistir.UseVisualStyleBackColor = true;
+            this.btnVeriDegistir.Click += new System.EventHandler(this.btnVeriDegistir_Click);
             // 
             // btnVeriSil
             // 
@@ -163,6 +169,7 @@
             this.btnSQLtoSchema.TabIndex = 1;
             this.btnSQLtoSchema.Text = "SQL den istenen semaya uygun XML olustur";
             this.btnSQLtoSchema.UseVisualStyleBackColor = true;
+            this.btnSQLtoSchema.Click += new System.EventHandler(this.btnSQLtoSchema_Click);
             // 
             // btnXMLSchemaDogrula
             // 
