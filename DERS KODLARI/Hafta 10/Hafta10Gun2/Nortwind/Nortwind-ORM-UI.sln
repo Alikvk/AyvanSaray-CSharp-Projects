@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nortwind.UI", "Nortwind.UI\Nortwind.UI.csproj", "{EFE81146-538B-4C47-B0ED-56E407B41E25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NortWind.ORM", "NortWind.ORM\NortWind.ORM.csproj", "{82167D49-A666-4494-9D5E-FC98120F4EC1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFE81146-538B-4C47-B0ED-56E407B41E25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFE81146-538B-4C47-B0ED-56E407B41E25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFE81146-538B-4C47-B0ED-56E407B41E25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFE81146-538B-4C47-B0ED-56E407B41E25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82167D49-A666-4494-9D5E-FC98120F4EC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82167D49-A666-4494-9D5E-FC98120F4EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82167D49-A666-4494-9D5E-FC98120F4EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82167D49-A666-4494-9D5E-FC98120F4EC1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D761A392-5A28-4914-97E9-472816846CB0}
+	EndGlobalSection
+EndGlobal
