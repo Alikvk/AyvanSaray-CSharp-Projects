@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <style>
+        #liste {
+            width: 200px;
+            height: 400px;
+            background-color: lightgray;
+        }
+        /*Div AcmaKapa butonuna still ver*/
+        .genel {
+            width: 200px;
+            height: 400px;
+            background-color: aquamarine;
+        }
+    </style>
+    <script src="Js/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#btnEkle").click(function () {
+                var metin = $("#txtAd").val() + "<br />";
+                $("#liste").append(metin);
+            });
+            //Butonun Bir kere renk değiştirmesi için kullanıyoruz
+            //$("#btnRenkDegistir").click(function () {
+            //    $(this).css("background-color", "red");
+            //});
+
+            $("#btnAcKapat").click(function () {
+                $(".genel").toggle("slow");
+            });
+
+            // Butonun rastgele değerlerini almamızı sağlamaktadır
+            $("#btnRenkDegistir").click(function () {
+                var redColor = Math.floor(Math.random() * 255);
+                var blueColor = Math.floor(Math.random() * 255);
+                var greenColor = Math.floor(Math.random() * 255);
+                $(this).css("background-color", "rgb(" + redColor + "," + blueColor + "," + greenColor + ")");
+                $("#liste").css("background-color", "rgb(" + redColor + "," + blueColor + "," + greenColor + ")");
+            });
+        });
+    </script>
+</head>
+<body>
+    <label for="txtAd">Adi</label>
+    <input type="text" id="txtAd" />
+    <input type="button" value="Ekle" id="btnEkle" />
+
+    <div id="liste">
+
+    </div>
+    <br />
+    <input type="button" value="Renk Değiştir" id="btnRenkDegistir" />
+
+    <input type="button" value="Div Kapa" id="btnAcKapat" />
+    <br />
+    <br />
+
+    <div class="genel">
+
+    </div>
+
+
+</body>
+</html>
