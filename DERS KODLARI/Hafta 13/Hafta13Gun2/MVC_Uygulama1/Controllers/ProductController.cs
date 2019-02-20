@@ -44,14 +44,9 @@ namespace MVC_Uygulama1.Controllers
             return View();
         }
         [HttpPost]
+        // Aşağıdaki alınan parametreler html sayfasında verileri alırken yazılan textbox numeric input formların nameleri ile aynı olmak zorundadır.
         public ActionResult AddProduct(string productName,decimal price,short unitInStock,int cId,int sId)
         {
-            List<Category> categories = NorthwindModel.Model.Categories.ToList();
-
-            List<Supplier> suppliers = NorthwindModel.Model.Suppliers.ToList();
-
-            ViewBag.categoriesVB = categories;
-            ViewBag.suppliersVB = suppliers;
             Product product = new Product()
             {
                 ProductName=productName,
@@ -63,7 +58,15 @@ namespace MVC_Uygulama1.Controllers
             NorthwindModel.Model.Products.Add(product);
             NorthwindModel.Model.SaveChanges();
 
-            return View();
+            // Aşağıdaki kod kısmında eğer return view(); şeklinde yollarsak sadece bu kodlar çalışacağından categories ve supplier kısımları gelmediğinde hata alacaktık. Ama eturn RedirectToAction("Index"); dersek aşağıdaki return view'e kadar olan kısmı yazmamıza gerek kalmaz
+            //List<Category> categories = NorthwindModel.Model.Categories.ToList();
+
+            //List<Supplier> suppliers = NorthwindModel.Model.Suppliers.ToList();
+
+            //ViewBag.categoriesVB = categories;
+            //ViewBag.suppliersVB = suppliers;
+            // return View();
+            return RedirectToAction("Index");
         }
     }
 }
