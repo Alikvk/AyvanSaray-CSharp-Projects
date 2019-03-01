@@ -38,7 +38,7 @@ namespace XmlVeriIslemleri
             xmlDoc.Load(dosyaninYolu);
             XmlNode secilenNode = xmlDoc.ChildNodes[1];// 0. indisinde "{XmlDeclaration, Value="version=\"1.0\" encoding=\"utf-8\""}" kısmı bulunmakta
             bool bulundu = false; // İstenilen ismin bulunup bulunmadığını görmekteyiz
-            foreach (XmlNode item in secilenNode)
+            foreach (XmlNode item in secilenNode.ChildNodes)
             {
                 if (item.ChildNodes[0].InnerText=="Can" || item.Attributes["TcNo"].Value=="12345678901" )
                 {
